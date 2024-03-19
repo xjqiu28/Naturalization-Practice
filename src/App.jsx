@@ -16,7 +16,7 @@ function App() {
     <div className="card">
       <div className="container">
         <Score score={score} />
-        <Questions increment={incrementScore}/>
+        <Questions score={score} incrementScore={incrementScore}/>
       </div>
     </div>
   );

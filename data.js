@@ -2,11 +2,11 @@ const data = {
   questions: [
     {
       question: 'What is the supreme law of the land?',
-      answer: 'the Constitution',
+      answers: 'the Constitution',
     },
     {
       question: 'What does the Constitution do?',
-      answer: [
+      answers: [
         'sets up the government',
         'defines the government',
         'protects basic rights of Americans',
@@ -15,22 +15,22 @@ const data = {
     {
       question:
         'The idea of self-government is in the first three words of the Constitution. What are these words?',
-      answer: 'We the People',
+      answers: 'We the People',
     },
     {
       question: 'What is an amendment?',
-      answer: [
-        'a change (to the Constitution)',
-        'an addition (to the Constitution)',
+      answers: [
+        'a change to the Constitution',
+        'an addition to the Constitution',
       ],
     },
     {
       question: 'What do we call the first ten amendments to the Constitution?',
-      answer: 'the Bill of Rights',
+      answers: 'the Bill of Rights',
     },
     {
       question: 'What is one right or freedom from the First Amendment?',
-      answer: [
+      answers: [
         'speech',
         'religion',
         'assembly',
@@ -40,31 +40,31 @@ const data = {
     },
     {
       question: 'How many amendments does the Constitution have?',
-      answer: 'twenty-seven (27)',
+      answers: 'twenty-seven 27',
     },
     {
       question: 'What did the Declaration of Independence do?',
-      answer: [
-        'announced our independence (from Great Britain)',
-        'declared our independence (from Great Britain)',
-        'said that the United States is free (from Great Britain)',
+      answers: [
+        'announced our independence from Great Britain',
+        'declared our independence from Great Britain',
+        'said that the United States is free from Great Britain',
       ],
     },
     {
       question: 'What are two rights in the Declaration of Independence?',
-      answer: ['life', 'liberty', 'pursuit of happiness'],
+      answers: ['life', 'liberty', 'pursuit of happiness'],
     },
     {
       question: 'What is freedom of religion?',
-      answer: 'You can practice any religion, or not practice a religion.',
+      answers: 'You can practice any religion, or not practice a religion.',
     },
     {
       question: 'What is the economic system in the United States?',
-      answer: ['capitalist economy', 'market economy'],
+      answers: ['capitalist economy', 'market economy'],
     },
     {
       question: 'What is the “rule of law”?',
-      answer: [
+      answers: [
         'Everyone must follow the law.',
         'Leaders must obey the law.',
         'Government must obey the law.',
@@ -73,7 +73,7 @@ const data = {
     },
     {
       question: 'Name one branch or part of the government.',
-      answer: [
+      answers: [
         'Congress',
         'legislative',
         'President',
@@ -85,134 +85,117 @@ const data = {
     {
       question:
         'What stops one branch of government from becoming too powerful?',
-      answer: ['checks and balances', 'separation of powers'],
+      answers: ['checks and balances', 'separation of powers'],
     },
     {
       question: 'Who is in charge of the executive branch?',
-      answer: 'the President',
+      answers: 'the President',
     },
     {
       question: 'Who makes federal laws?',
-      answer: [
+      answers: [
         'Congress',
-        'Senate and House (of Representatives)',
-        '(U.S. or national) legislature',
+        'Senate and House of Representatives',
+        'U.S. or national legislature',
       ],
     },
     {
       question: 'What are the two parts of the U.S. Congress?',
-      answer: 'the Senate and House (of Representatives)',
+      answers: 'the Senate and House of Representatives',
     },
     {
       question: 'How many U.S. Senators are there?',
-      answer: 'one hundred (100)',
+      answers: 'one hundred 100',
     },
     {
       question: 'We elect a U.S. Senator for how many years?',
-      answer: 'six (6)',
+      answers: 'six 6',
     },
     {
       question: 'Who is one of your state’s U.S. Senators now?',
-      answer:
-        'Answers will vary. [District of Columbia residents and residents of U.S. territories should answer that D.C. (or the territory where the applicant lives) has no U.S. Senators.]',
+      answers:
+        'Answers will vary. [District of Columbia residents and residents of U.S. territories should answers that D.C. or the territory where the applicant lives has no U.S. Senators.]',
     },
     {
       question: 'The House of Representatives has how many voting members?',
-      answer: 'four hundred thirty-five (435)',
+      answers: 'four hundred thirty-five 435',
     },
     {
       question: 'We elect a U.S. Representative for how many years?',
-      answer: 'two (2)',
+      answers: 'two 2',
     },
     {
       question: 'Name your U.S. Representative.',
-      answer:
-        'Answers will vary. [Residents of territories with nonvoting Delegates or Resident Commissioners may provide the name of that Delegate or Commissioner. Also acceptable is any statement that the territory has no (voting) Representatives in Congress.]',
+      answers:
+        'Answers will vary. [Residents of territories with nonvoting Delegates or Resident Commissioners may provide the name of that Delegate or Commissioner. Also acceptable is any statement that the territory has no voting Representatives in Congress.]',
     },
     {
       question: 'Who does a U.S. Senator represent?',
-      answer: 'all people of the state',
+      answers: 'all people of the state',
     },
     {
       question:
         'Why do some states have more Representatives than other states?',
-      answer: [
-        '(because of) the state’s population',
-        '(because) they have more people',
-        '(because) some states have more people',
+      answers: [
+        'because of the state’s population',
+        'because they have more people',
+        'because some states have more people',
       ],
     },
     {
       question: 'We elect a President for how many years?',
-      answer: 'four (4)',
+      answers: 'four 4',
     },
     {
       question: 'In what month do we vote for President?',
-      answer: 'November',
+      answers: 'November',
     },
     {
       question: 'What is the name of the President of the United States now?',
-      answer:
+      answers:
         'Visit uscis.gov/citizenship/testupdates for the name of the President of the United States.',
     },
     {
       question:
         'What is the name of the Vice President of the United States now?',
-      answer:
+      answers:
         'Visit uscis.gov/citizenship/testupdates for the name of the Vice President of the United States.',
     },
     {
       question: 'If the President can no longer serve, who becomes President?',
-      answer: 'the Vice President',
+      answers: 'the Vice President',
     },
     {
       question:
         'If both the President and the Vice President can no longer serve, who becomes President?',
-      answer: 'the Speaker of the House',
+      answers: 'the Speaker of the House',
     },
     {
       question: 'Who is the Commander in Chief of the military?',
-      answer: 'the President',
+      answers: 'the President',
     },
     {
       question: 'Who signs bills to become laws?',
-      answer: 'the President',
+      answers: 'the President',
     },
     {
       question: 'Who vetoes bills?',
-      answer: 'the President',
+      answers: 'the President',
     },
     {
       question: 'What does the President’s Cabinet do?',
-      answer: 'advises the President',
+      answers: 'advises the President',
     },
     {
       question: 'What are two Cabinet-level positions?',
-      answer: [
-        'Secretary of Agriculture',
-        'Secretary of Commerce',
-        'Secretary of Defense',
-        'Secretary of Education',
-        'Secretary of Energy',
-        'Secretary of Health and Human Services',
-        'Secretary of Homeland Security',
-        'Secretary of Housing and Urban Development',
-        'Secretary of the Interior',
-        'Secretary of Labor',
-        'Secretary of State',
-        'Secretary of Transportation',
-        'Secretary of the Treasury',
-        'Secretary of Veterans Affairs',
-        'Attorney General',
-        'Vice President',
-      ],
+      answers: "secretary of education, vice president"
     },
     {
       question: 'What does the judicial branch do?',
       answers: [
         'reviews laws',
         'explains laws',
-        'resolves disputes (disagreements)',
+        'resolves disputes disagreements',
         'decides if a law goes against the Constitution',
       ],
     },
@@ -247,8 +230,8 @@ const data = {
         'Under our Constitution, some powers belong to the states. What is one power of the states?',
       answers: [
         'provide schooling and education',
-        'provide protection (police)',
-        'provide safety (fire departments)',
+        'provide protection police',
+        'provide safety fire departments',
         'give a driver’s license',
         'approve zoning and land use',
       ],
@@ -256,19 +239,19 @@ const data = {
     {
       question: 'Who is the Governor of your state now?',
       answers: [
-        'Answers will vary. [District of Columbia residents should answer that D.C. does not have a Governor.]',
+        'Answers will vary. [District of Columbia residents should answers that D.C. does not have a Governor.]',
       ],
     },
     {
       question: 'What is the capital of your state?*',
       answers: [
-        'Answers will vary. [District of Columbia residents should answer that D.C. is not a state and does not have a capital. Residents of U.S. territories should name the capital of the territory.]',
+        'Answers will vary. [District of Columbia residents should answers that D.C. is not a state and does not have a capital. Residents of U.S. territories should name the capital of the territory.]',
       ],
     },
     {
       question:
         'What are the two major political parties in the United States?*',
-      answers: ['Democratic and Republican'],
+      answers: 'democratic, republican',
     },
     {
       question: 'What is the political party of the President now?',
@@ -287,10 +270,10 @@ const data = {
       question:
         'There are four amendments to the Constitution about who can vote. Describe one of them.',
       answers: [
-        'Citizens eighteen (18) and older (can vote).',
-        'You don’t have to pay (a poll tax) to vote.',
-        'Any citizen can vote. (Women and men can vote.)',
-        'A male citizen of any race (can vote).',
+        'Citizens eighteen 18 and older can vote.',
+        'You don’t have to pay a poll tax to vote.',
+        'Any citizen can vote. Women and men can vote.',
+        'A male citizen of any race can vote.',
       ],
     },
     {
@@ -325,30 +308,19 @@ const data = {
         'give up loyalty to other countries',
         'defend the Constitution and laws of the United States',
         'obey the laws of the United States',
-        'serve in the U.S. military (if needed)',
-        'serve (do important work for) the nation (if needed)',
+        'serve in the U.S. military if needed',
+        'serve do important work for the nation if needed',
         'be loyal to the United States',
       ],
     },
     {
       question: 'How old do citizens have to be to vote for President?*',
-      answers: ['eighteen (18) and older'],
+      answers: ['eighteen 18 and older'],
     },
     {
       question:
         'What are two ways that Americans can participate in their democracy?',
-      answers: [
-        'vote',
-        'join a political party',
-        'help with a campaign',
-        'join a civic group',
-        'join a community group',
-        'give an elected official your opinion on an issue',
-        'call Senators and Representatives',
-        'publicly support or oppose an issue or policy',
-        'run for office',
-        'write to a newspaper',
-      ],
+      answers: 'vote, join political party'
     },
     {
       question:
@@ -358,8 +330,8 @@ const data = {
     {
       question: 'When must all men register for the Selective Service?',
       answers: [
-        'at age eighteen (18)',
-        'between eighteen (18) and twenty-six (26)',
+        'at age eighteen 18',
+        'between eighteen 18 and twenty-six 26',
       ],
     },
     {
@@ -384,14 +356,14 @@ const data = {
     {
       question: 'Why did the colonists fight the British?',
       answers: [
-        'because of high taxes (taxation without representation)',
-        'because the British army stayed in their houses (boarding, quartering)',
+        'because of high taxes taxation without representation',
+        'because the British army stayed in their houses boarding, quartering',
         'because they didn’t have self-government',
       ],
     },
     {
       question: 'Who wrote the Declaration of Independence?',
-      answers: ['(Thomas) Jefferson'],
+      answers: ['Thomas Jefferson'],
     },
     {
       question: 'When was the Declaration of Independence adopted?',
@@ -430,9 +402,9 @@ const data = {
       question:
         'The Federalist Papers supported the passage of the U.S. Constitution. Name one of the writers.',
       answers: [
-        '(James) Madison',
-        '(Alexander) Hamilton',
-        '(John) Jay',
+        'James Madison',
+        'Alexander Hamilton',
+        'John Jay',
         'Publius',
       ],
     },
@@ -448,11 +420,11 @@ const data = {
     },
     {
       question: 'Who is the “Father of Our Country”?',
-      answers: ['(George) Washington'],
+      answers: ['George Washington'],
     },
     {
       question: 'Who was the first President?*',
-      answers: ['(George) Washington'],
+      answers: ['George Washington'],
     },
     {
       question: 'What territory did the United States buy from France in 1803?',
@@ -478,8 +450,8 @@ const data = {
     {
       question: 'What was one important thing that Abraham Lincoln did?*',
       answers: [
-        'freed the slaves (Emancipation Proclamation)',
-        'saved (or preserved) the Union',
+        'freed the slaves Emancipation Proclamation',
+        'saved or preserved the Union',
         'led the United States during the Civil War',
       ],
     },
@@ -503,17 +475,17 @@ const data = {
         'World War II',
         'Korean War',
         'Vietnam War',
-        '(Persian) Gulf War',
+        'Persian Gulf War',
       ],
     },
     {
       question: 'Who was President during World War I?',
-      answers: ['(Woodrow) Wilson'],
+      answers: ['Woodrow Wilson'],
     },
     {
       question:
         'Who was President during the Great Depression and World War II?',
-      answers: ['(Franklin) Roosevelt'],
+      answers: ['Franklin Roosevelt'],
     },
     {
       question: 'Who did the United States fight in World War II?',
@@ -531,7 +503,7 @@ const data = {
     },
     {
       question: 'What movement tried to end racial discrimination?',
-      answers: ['civil rights (movement)'],
+      answers: ['civil rights movement'],
     },
     {
       question: 'What did Martin Luther King, Jr. do?*',
@@ -574,15 +546,15 @@ const data = {
     },
     {
       question: 'Name one of the two longest rivers in the United States.',
-      answers: ['Missouri (River)', 'Mississippi (River)'],
+      answers: ['Missouri River', 'Mississippi River'],
     },
     {
       question: 'What ocean is on the West Coast of the United States?',
-      answers: ['Pacific (Ocean)'],
+      answers: ['Pacific Ocean'],
     },
     {
       question: 'What ocean is on the East Coast of the United States?',
-      answers: ['Atlantic (Ocean)'],
+      answers: ['Atlantic Ocean'],
     },
     {
       question: 'Name one U.S. territory.',
@@ -622,7 +594,7 @@ const data = {
     },
     {
       question: 'Where is the Statue of Liberty?*',
-      answers: ['New York (Harbor)', 'Liberty Island'],
+      answers: ['New York Harbor', 'Liberty Island'],
     },
     {
       question: 'Why does the flag have 13 stripes?',
