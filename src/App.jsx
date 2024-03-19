@@ -8,11 +8,16 @@ import './App.css';
 
 function App() {
 
+  const incrementScore = () => {
+    setScore(score + 1);
+  }
   const [score, setScore] = useState(0);
   return (
-    <div>
-      <Score score = {score}/>
-      <Questions />
+    <div className="card">
+      <div className="container">
+        <Score score={score} />
+        <Questions increment={incrementScore}/>
+      </div>
     </div>
   );
 }
