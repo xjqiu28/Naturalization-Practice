@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import data from '../../data.js';
+import updatedData from '../../data.js';
 import './questions.css';
 
 function Questions(props) {
@@ -12,7 +12,7 @@ function Questions(props) {
     const generateNumbers = () => {
       const numbersGenerated = [];
       while (numbersGenerated.length < 10){
-        let random = Math.floor(Math.random() * data.questions.length-1);
+        let random = Math.floor(Math.random() * updatedData.questions.length-1);
         if (!numbersGenerated.includes(random)){
           numbersGenerated.push(random);
         }
@@ -28,7 +28,7 @@ function Questions(props) {
     e.preventDefault();
     console.log(numbers)
     const answer = e.target.answer.value;
-    const answers = data.questions[numbers[count]].answers;
+    const answers = updatedData.questions[numbers[count]].answers;
     console.log(answers);
     if (answer === '') {
       setCount(count + 1);
@@ -55,7 +55,7 @@ function Questions(props) {
     <div className="question-box">
       {numbers.length > 0 && count < 10 ? (
         <div>
-          {data.questions[numbers[count]].question}{' '}
+          {updatedData.questions[numbers[count]].question}{' '}
           <form onSubmit={onSubmit} autoComplete="off">
             <input type="text" name="answer" placeholder="Enter answer here" />
             <button type="submit">Submit</button>
