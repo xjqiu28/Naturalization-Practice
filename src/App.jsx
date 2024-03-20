@@ -7,6 +7,7 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
+  
 
   const incrementScore = () => {
     setScore(score + 1);
