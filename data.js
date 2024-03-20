@@ -638,4 +638,13 @@ const data = {
   ],
 };
 
-export default data;
+const updatedData = {
+  questions: data.questions.map(questionObj => ({
+    ...questionObj,
+    status: 'wrong',
+  }))
+};
+
+console.log(updatedData);
+
+export default updatedData;
