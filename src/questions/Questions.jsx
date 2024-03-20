@@ -7,13 +7,12 @@ function Questions(props) {
   const [numbers, setNumbers] = useState([]);
   const { incrementScore, score } = props;
 
-
   useEffect(() => {
     const generateNumbers = () => {
       const numbersGenerated = [];
-      while (numbersGenerated.length < 10){
-        let random = Math.floor(Math.random() * data.questions.length-1);
-        if (!numbersGenerated.includes(random)){
+      while (numbersGenerated.length < 10) {
+        let random = Math.floor(Math.random() * data.questions.length);
+        if (!numbersGenerated.includes(random)) {
           numbersGenerated.push(random);
         }
       }
@@ -21,25 +20,32 @@ function Questions(props) {
     };
 
     generateNumbers();
-  }, [])
-
+  }, []);
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(numbers)
+    console.log(numbers);
     const answer = e.target.answer.value;
-    const answers = data.questions[numbers[count]].answers;
+    let answers = data.questions[numbers[count]].answers;
     console.log(answers);
     if (answer === '') {
       setCount(count + 1);
     } else {
       if (typeof answers === 'object') {
-        answers.forEach((ans, index) => {
-          ans = ans.toLowerCase();
-          if (ans.includes(answer)) {
+        if (answers.length === 1) {
+          answers = answers.join('').toLowerCase();
+          console.log("Inside answers.length = 1: ", answers);
+          if (answers.includes(answer.toLowerCase())) {
             incrementScore();
           }
-        });
+        } else {
+          answers.forEach((ans, index) => {
+            ans = ans.toLowerCase();
+            if (ans.includes(answer)) {
+              incrementScore();
+            }
+          });
+        }
       } else {
         console.log('Inside else statement: ', answers);
         if (answers.toLowerCase().includes(answer)) {
