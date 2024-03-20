@@ -1,18 +1,28 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import data from '../../data.js';
 import './questions.css';
 
 function Questions(props) {
   const [count, setCount] = useState(0);
-  const numbers = [];
+  const [numbers, setNumbers] = useState([]);
   const { incrementScore, score } = props;
 
-  while (numbers.length < 10) {
-    let random = Math.floor(Math.random() * data.questions.length - 1);
-    if (!numbers.includes(random)) {
-      numbers.push(random);
-    }
-  }
+
+  useEffect(() => {
+    const generateNumbers = () => {
+      const numbersGenerated = [];
+      while (numbersGenerated.length < 10){
+        let random = Math.floor(Math.random() * data.questions.length-1);
+        if (!numbersGenerated.includes(random)){
+          numbersGenerated.push(random);
+        }
+      }
+      setNumbers(numbersGenerated);
+    };
+
+    generateNumbers();
+  }, [])
+
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -43,9 +53,8 @@ function Questions(props) {
 
   return (
     <div className="question-box">
-      {count < 10 ? (
+      {numbers.length > 0 && count < 10 ? (
         <div>
-          <p>This is the current {numbers[count]} value</p>
           {data.questions[numbers[count]].question}{' '}
           <form onSubmit={onSubmit} autoComplete="off">
             <input type="text" name="answer" placeholder="Enter answer here" />
