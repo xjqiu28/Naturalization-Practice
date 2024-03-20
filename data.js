@@ -52,7 +52,7 @@ const data = {
     },
     {
       question: 'What are two rights in the Declaration of Independence?',
-      answers: ['life', 'liberty', 'pursuit of happiness'],
+      answers: ['life and liberty'],
     },
     {
       question: 'What is freedom of religion?',
@@ -114,7 +114,7 @@ const data = {
     {
       question: 'Who is one of your state’s U.S. Senators now?',
       answers:
-        'Answers will vary. [District of Columbia residents and residents of U.S. territories should answers that D.C. or the territory where the applicant lives has no U.S. Senators.]',
+        'Chuck Schumer',
     },
     {
       question: 'The House of Representatives has how many voting members?',
@@ -127,7 +127,7 @@ const data = {
     {
       question: 'Name your U.S. Representative.',
       answers:
-        'Answers will vary. [Residents of territories with nonvoting Delegates or Resident Commissioners may provide the name of that Delegate or Commissioner. Also acceptable is any statement that the territory has no voting Representatives in Congress.]',
+        'Thomas Suozzi',
     },
     {
       question: 'Who does a U.S. Senator represent?',
@@ -153,13 +153,13 @@ const data = {
     {
       question: 'What is the name of the President of the United States now?',
       answers:
-        'Visit uscis.gov/citizenship/testupdates for the name of the President of the United States.',
+        'Joe Biden',
     },
     {
       question:
         'What is the name of the Vice President of the United States now?',
       answers:
-        'Visit uscis.gov/citizenship/testupdates for the name of the Vice President of the United States.',
+        'Kamala Harris',
     },
     {
       question: 'If the President can no longer serve, who becomes President?',
@@ -206,13 +206,13 @@ const data = {
     {
       question: 'How many justices are on the Supreme Court?',
       answers: [
-        'Visit uscis.gov/citizenship/testupdates for the number of justices on the Supreme Court.',
+        'nine 9',
       ],
     },
     {
       question: 'Who is the Chief Justice of the United States now?',
       answers: [
-        'Visit uscis.gov/citizenship/testupdates for the name of the Chief Justice of the United States.',
+        'John G. Roberts Jr',
       ],
     },
     {
@@ -239,13 +239,13 @@ const data = {
     {
       question: 'Who is the Governor of your state now?',
       answers: [
-        'Answers will vary. [District of Columbia residents should answers that D.C. does not have a Governor.]',
+        'Kathy Hochul',
       ],
     },
     {
       question: 'What is the capital of your state?*',
       answers: [
-        'Answers will vary. [District of Columbia residents should answers that D.C. is not a state and does not have a capital. Residents of U.S. territories should name the capital of the territory.]',
+        'Albany',
       ],
     },
     {
@@ -256,14 +256,14 @@ const data = {
     {
       question: 'What is the political party of the President now?',
       answers: [
-        'Visit uscis.gov/citizenship/testupdates for the political party of the President.',
+        'Democratic',
       ],
     },
     {
       question:
         'What is the name of the Speaker of the House of Representatives now?',
       answers: [
-        'Visit uscis.gov/citizenship/testupdates for the name of the Speaker of the House of Representatives.',
+        'Mike Johnson',
       ],
     },
     {
@@ -287,14 +287,7 @@ const data = {
     },
     {
       question: 'What are two rights of everyone living in the United States?',
-      answers: [
-        'freedom of expression',
-        'freedom of speech',
-        'freedom of assembly',
-        'freedom to petition the government',
-        'freedom of religion',
-        'the right to bear arms',
-      ],
+      answers: 'freedom of speech, freedom of religion',
     },
     {
       question:
@@ -371,21 +364,7 @@ const data = {
     },
     {
       question: 'There were 13 original states. Name three.',
-      answers: [
-        'New Hampshire',
-        'Massachusetts',
-        'Rhode Island',
-        'Connecticut',
-        'New York',
-        'New Jersey',
-        'Pennsylvania',
-        'Delaware',
-        'Maryland',
-        'Virginia',
-        'North Carolina',
-        'South Carolina',
-        'Georgia',
-      ],
+      answers: 'New Hampshire, New York, New Jersey',
     },
     {
       question: 'What happened at the Constitutional Convention?',
@@ -599,7 +578,7 @@ const data = {
     {
       question: 'Why does the flag have 13 stripes?',
       answers: [
-        'because there were 13 original colonies',
+        'there were 13 original colonies',
         'because the stripes represent the original colonies',
       ],
     },
@@ -608,7 +587,7 @@ const data = {
       answers: [
         'because there is one star for each state',
         'because each star represents a state',
-        'because there are 50 states',
+        'there are 50 states',
       ],
     },
     {
@@ -621,19 +600,7 @@ const data = {
     },
     {
       question: 'Name two national U.S. holidays.',
-      answers: [
-        'New Year’s Day',
-        'Martin Luther King, Jr. Day',
-        'Presidents’ Day',
-        'Memorial Day',
-        'Juneteenth',
-        'Independence Day',
-        'Labor Day',
-        'Columbus Day',
-        'Veterans Day',
-        'Thanksgiving',
-        'Christmas',
-      ],
+      answers: 'Christmas, New Year',
     },
   ],
 };
