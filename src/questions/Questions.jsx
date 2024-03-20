@@ -5,15 +5,15 @@ import './questions.css';
 function Questions(props) {
   const [count, setCount] = useState(0);
   const [numbers, setNumbers] = useState([]);
+  const [wrongQuestions, setWrongQuestions] = useState([]);
   const { incrementScore, score } = props;
-
 
   useEffect(() => {
     const generateNumbers = () => {
       const numbersGenerated = [];
-      while (numbersGenerated.length < 10){
-        let random = Math.floor(Math.random() * updatedData.questions.length-1);
-        if (!numbersGenerated.includes(random)){
+      while (numbersGenerated.length < 10) {
+        let random = Math.floor(Math.random() * updatedData.questions.length);
+        if (!numbersGenerated.includes(random)) {
           numbersGenerated.push(random);
         }
       }
@@ -21,16 +21,17 @@ function Questions(props) {
     };
 
     generateNumbers();
-  }, [])
-
+  }, []);
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(numbers)
+    console.log(numbers);
     const answer = e.target.answer.value;
     const answers = updatedData.questions[numbers[count]].answers;
+    const question = updatedData.questions[numbers[count]];
     console.log(answers);
     if (answer === '') {
+      setWrongQuestions([...wrongQuestions, question]);
       setCount(count + 1);
     } else {
       if (typeof answers === 'object') {
@@ -38,12 +39,16 @@ function Questions(props) {
           ans = ans.toLowerCase();
           if (ans.includes(answer)) {
             incrementScore();
+          } else {
+            setWrongQuestions([...wrongQuestions, question]);
           }
         });
       } else {
         console.log('Inside else statement: ', answers);
         if (answers.toLowerCase().includes(answer)) {
           incrementScore();
+        } else {
+          setWrongQuestions([...wrongQuestions, question]);
         }
       }
     }
@@ -64,9 +69,32 @@ function Questions(props) {
       ) : (
         <>
           {score < 6 ? (
-            <p>You have failed the test 😞😞</p>
+            <div className='question-box'>
+              <p>You have failed the test 😞😞</p>
+              <p>Questions you got wrong:</p>
+              <ul>
+                {wrongQuestions.map((question, index) => (
+                  <>
+                    <li className="question" key={index}>{question.question}</li>
+                    <li className="answer" key={index}>{question.answers}</li>
+                    <hr className="horizontal-line"></hr>
+                  </>
+                  
+                ))}
+              </ul>
+              <a href="/">Reset</a>
+            </div>
           ) : (
-            <p>You have passed the test with {score}/10</p>
+            <div className='question-box'>
+              <p>You have passed the test with {score}/10</p>
+              <p>Questions you got wrong:</p>
+              <ul>
+                {wrongQuestions.map((question, index) => (
+                  <li key={index}>{question.question}</li>
+                ))}
+              </ul>
+              <a href="/">Reset</a>
+            </div>
           )}
         </>
       )}

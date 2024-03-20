@@ -44,11 +44,8 @@ const data = {
     },
     {
       question: 'What did the Declaration of Independence do?',
-      answers: [
-        'announced our independence from Great Britain',
+      answers:
         'declared our independence from Great Britain',
-        'said that the United States is free from Great Britain',
-      ],
     },
     {
       question: 'What are two rights in the Declaration of Independence?',
@@ -348,11 +345,7 @@ const data = {
     },
     {
       question: 'Why did the colonists fight the British?',
-      answers: [
-        'because of high taxes taxation without representation',
-        'because the British army stayed in their houses boarding, quartering',
-        'because they didn’t have self-government',
-      ],
+      answers: 'high taxes, and no self-government'
     },
     {
       question: 'Who wrote the Declaration of Independence?',
@@ -486,10 +479,7 @@ const data = {
     },
     {
       question: 'What did Martin Luther King, Jr. do?*',
-      answers: [
-        'fought for civil rights',
-        'worked for equality for all Americans',
-      ],
+      answers: 'fought of civil rights'
     },
     {
       question:
