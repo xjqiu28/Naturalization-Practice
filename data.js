@@ -30,13 +30,7 @@ const data = {
     },
     {
       question: 'What is one right or freedom from the First Amendment?',
-      answers: [
-        'speech',
-        'religion',
-        'assembly',
-        'press',
-        'petition the government',
-      ],
+      answers: 'speech, religion',
     },
     {
       question: 'How many amendments does the Constitution have?',
@@ -44,8 +38,7 @@ const data = {
     },
     {
       question: 'What did the Declaration of Independence do?',
-      answers:
-        'declared our independence from Great Britain',
+      answers: 'declared our independence from Great Britain',
     },
     {
       question: 'What are two rights in the Declaration of Independence?',
@@ -61,12 +54,7 @@ const data = {
     },
     {
       question: 'What is the “rule of law”?',
-      answers: [
-        'Everyone must follow the law.',
-        'Leaders must obey the law.',
-        'Government must obey the law.',
-        'No one is above the law.',
-      ],
+      answers: 'Everyone must follow the law',
     },
     {
       question: 'Name one branch or part of the government.',
@@ -90,11 +78,7 @@ const data = {
     },
     {
       question: 'Who makes federal laws?',
-      answers: [
-        'Congress',
-        'Senate and House of Representatives',
-        'U.S. or national legislature',
-      ],
+      answers: 'Congress',
     },
     {
       question: 'What are the two parts of the U.S. Congress?',
@@ -110,8 +94,7 @@ const data = {
     },
     {
       question: 'Who is one of your state’s U.S. Senators now?',
-      answers:
-        'Chuck Schumer',
+      answers: 'Chuck Schumer',
     },
     {
       question: 'The House of Representatives has how many voting members?',
@@ -123,8 +106,7 @@ const data = {
     },
     {
       question: 'Name your U.S. Representative.',
-      answers:
-        'Thomas Suozzi',
+      answers: 'Thomas Suozzi',
     },
     {
       question: 'Who does a U.S. Senator represent?',
@@ -149,14 +131,12 @@ const data = {
     },
     {
       question: 'What is the name of the President of the United States now?',
-      answers:
-        'Joe Biden',
+      answers: 'Joe Biden',
     },
     {
       question:
         'What is the name of the Vice President of the United States now?',
-      answers:
-        'Kamala Harris',
+      answers: 'Kamala Harris',
     },
     {
       question: 'If the President can no longer serve, who becomes President?',
@@ -185,7 +165,7 @@ const data = {
     },
     {
       question: 'What are two Cabinet-level positions?',
-      answers: "secretary of education, vice president"
+      answers: 'secretary of education, vice president',
     },
     {
       question: 'What does the judicial branch do?',
@@ -202,15 +182,11 @@ const data = {
     },
     {
       question: 'How many justices are on the Supreme Court?',
-      answers: [
-        'nine 9',
-      ],
+      answers: ['nine 9'],
     },
     {
       question: 'Who is the Chief Justice of the United States now?',
-      answers: [
-        'John G. Roberts Jr',
-      ],
+      answers: ['John G. Roberts Jr'],
     },
     {
       question:
@@ -225,25 +201,15 @@ const data = {
     {
       question:
         'Under our Constitution, some powers belong to the states. What is one power of the states?',
-      answers: [
-        'provide schooling and education',
-        'provide protection police',
-        'provide safety fire departments',
-        'give a driver’s license',
-        'approve zoning and land use',
-      ],
+      answers: 'give a driver’s license',
     },
     {
       question: 'Who is the Governor of your state now?',
-      answers: [
-        'Kathy Hochul',
-      ],
+      answers: ['Kathy Hochul'],
     },
     {
       question: 'What is the capital of your state?*',
-      answers: [
-        'Albany',
-      ],
+      answers: ['Albany'],
     },
     {
       question:
@@ -252,26 +218,17 @@ const data = {
     },
     {
       question: 'What is the political party of the President now?',
-      answers: [
-        'Democratic',
-      ],
+      answers: ['Democratic'],
     },
     {
       question:
         'What is the name of the Speaker of the House of Representatives now?',
-      answers: [
-        'Mike Johnson',
-      ],
+      answers: ['Mike Johnson'],
     },
     {
       question:
         'There are four amendments to the Constitution about who can vote. Describe one of them.',
-      answers: [
-        'Citizens eighteen 18 and older can vote.',
-        'You don’t have to pay a poll tax to vote.',
-        'Any citizen can vote. Women and men can vote.',
-        'A male citizen of any race can vote.',
-      ],
+      answers: 'Citizens eighteen 18 and older can vote.',
     },
     {
       question:
@@ -310,7 +267,7 @@ const data = {
     {
       question:
         'What are two ways that Americans can participate in their democracy?',
-      answers: 'vote, join political party'
+      answers: 'vote, join political party',
     },
     {
       question:
@@ -319,10 +276,7 @@ const data = {
     },
     {
       question: 'When must all men register for the Selective Service?',
-      answers: [
-        'at age eighteen 18',
-        'between eighteen 18 and twenty-six 26',
-      ],
+      answers: ['at age eighteen 18', 'between eighteen 18 and twenty-six 26'],
     },
     {
       question: 'What is one reason colonists came to America?',
@@ -345,7 +299,7 @@ const data = {
     },
     {
       question: 'Why did the colonists fight the British?',
-      answers: 'high taxes, and no self-government'
+      answers: 'high taxes, and no self-government',
     },
     {
       question: 'Who wrote the Declaration of Independence?',
@@ -373,22 +327,11 @@ const data = {
     {
       question:
         'The Federalist Papers supported the passage of the U.S. Constitution. Name one of the writers.',
-      answers: [
-        'James Madison',
-        'Alexander Hamilton',
-        'John Jay',
-        'Publius',
-      ],
+      answers: 'James Madison, Alexandre Hamilton, Publius, John Jay',
     },
     {
       question: 'What is one thing Benjamin Franklin is famous for?',
-      answers: [
-        'U.S. diplomat',
-        'oldest member of the Constitutional Convention',
-        'first Postmaster General of the United States',
-        'writer of “Poor Richard’s Almanac”',
-        'started the first free libraries',
-      ],
+      answers: 'U.S Diplomat'
     },
     {
       question: 'Who is the “Father of Our Country”?',
@@ -442,13 +385,7 @@ const data = {
     },
     {
       question: 'Name one war fought by the United States in the 1900s.*',
-      answers: [
-        'World War I',
-        'World War II',
-        'Korean War',
-        'Vietnam War',
-        'Persian Gulf War',
-      ],
+      answers: 'World War I',
     },
     {
       question: 'Who was President during World War I?',
@@ -461,7 +398,7 @@ const data = {
     },
     {
       question: 'Who did the United States fight in World War II?',
-      answers: ['Japan, Germany, and Italy'],
+      answers: 'Japan, Germany, Italy',
     },
     {
       question:
@@ -479,7 +416,7 @@ const data = {
     },
     {
       question: 'What did Martin Luther King, Jr. do?*',
-      answers: 'fought of civil rights'
+      answers: 'fought for civil rights',
     },
     {
       question:
@@ -515,7 +452,7 @@ const data = {
     },
     {
       question: 'Name one of the two longest rivers in the United States.',
-      answers: ['Missouri River', 'Mississippi River'],
+      answers: 'Mississippi River',
     },
     {
       question: 'What ocean is on the West Coast of the United States?',
@@ -555,11 +492,11 @@ const data = {
     },
     {
       question: 'Name one state that borders Mexico.',
-      answers: ['California', 'Arizona', 'New Mexico', 'Texas'],
+      answers: 'California',
     },
     {
       question: 'What is the capital of the United States?*',
-      answers: ['Washington, D.C.'],
+      answers: ['Washington DC'],
     },
     {
       question: 'Where is the Statue of Liberty?*',
@@ -596,10 +533,10 @@ const data = {
 };
 
 const updatedData = {
-  questions: data.questions.map(questionObj => ({
+  questions: data.questions.map((questionObj) => ({
     ...questionObj,
     status: 'wrong',
-  }))
+  })),
 };
 
 console.log(updatedData);

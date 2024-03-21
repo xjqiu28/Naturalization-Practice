@@ -33,26 +33,27 @@ function Questions(props) {
     console.log(answers);
     if (answer === '') {
       setWrongQuestions([...wrongQuestions, question]);
-      setCount(count + 1);
     } else {
+      let isAnswerCorrect = false;
       if (typeof answers === 'object') {
-        answers.forEach((ans, index) => {
+        answers.forEach((ans) => {
           ans = ans.toLowerCase();
-          if (ans.includes(answer)) {
-            setCorrectQuestions([...correctQuestions, question]);
+          if (ans.includes(answer.toLowerCase())) {
+            isAnswerCorrect = true;
             incrementScore();
-          } else {
-            setWrongQuestions([...wrongQuestions, question]);
           }
         });
       } else {
-        console.log('Inside else statement: ', answers);
-        if (answers.toLowerCase().includes(answer)) {
-          setCorrectQuestions([...correctQuestions, question]);
+        if (answers.toLowerCase().includes(answer.toLowerCase())) {
+          isAnswerCorrect = true;
           incrementScore();
-        } else {
-          setWrongQuestions([...wrongQuestions, question]);
         }
+      }
+
+      if (isAnswerCorrect) {
+        setCorrectQuestions([...correctQuestions, question]);
+      } else {
+        setWrongQuestions([...wrongQuestions, question]);
       }
     }
     setCount(count + 1);
@@ -124,7 +125,15 @@ function Questions(props) {
               <p>Questions you got wrong:</p>
               <ul>
                 {wrongQuestions.map((question, index) => (
-                  <li key={index}>{question.question}</li>
+                  <>
+                    <li className="question" key={index}>
+                      {question.question}
+                    </li>
+                    <li className="answer" key={index}>
+                      {question.answers}
+                    </li>
+                    <hr className="horizontal-line"></hr>
+                  </>
                 ))}
               </ul>
               <a href="/">Reset</a>
