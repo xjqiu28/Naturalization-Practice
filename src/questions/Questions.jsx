@@ -6,6 +6,7 @@ function Questions(props) {
   const [count, setCount] = useState(0);
   const [numbers, setNumbers] = useState([]);
   const [wrongQuestions, setWrongQuestions] = useState([]);
+  const [correctQuestions, setCorrectQuestions] = useState([]);
   const { incrementScore, score } = props;
 
   useEffect(() => {
@@ -32,24 +33,27 @@ function Questions(props) {
     console.log(answers);
     if (answer === '') {
       setWrongQuestions([...wrongQuestions, question]);
-      setCount(count + 1);
     } else {
+      let isAnswerCorrect = false;
       if (typeof answers === 'object') {
-        answers.forEach((ans, index) => {
+        answers.forEach((ans) => {
           ans = ans.toLowerCase();
-          if (ans.includes(answer)) {
+          if (ans.includes(answer.toLowerCase())) {
+            isAnswerCorrect = true;
             incrementScore();
-          } else {
-            setWrongQuestions([...wrongQuestions, question]);
           }
         });
       } else {
-        console.log('Inside else statement: ', answers);
-        if (answers.toLowerCase().includes(answer)) {
+        if (answers.toLowerCase().includes(answer.toLowerCase())) {
+          isAnswerCorrect = true;
           incrementScore();
-        } else {
-          setWrongQuestions([...wrongQuestions, question]);
         }
+      }
+
+      if (isAnswerCorrect) {
+        setCorrectQuestions([...correctQuestions, question]);
+      } else {
+        setWrongQuestions([...wrongQuestions, question]);
       }
     }
     setCount(count + 1);
@@ -69,28 +73,67 @@ function Questions(props) {
       ) : (
         <>
           {score < 6 ? (
-            <div className='question-box'>
+            <div className="question-box">
               <p>You have failed the test 😞😞</p>
+              <p>Questions you got right:</p>
+              <ul>
+                {correctQuestions.map((question, index) => (
+                  <>
+                    <li className="question" key={index}>
+                      {question.question}
+                    </li>
+                    <li className="answer" key={index}>
+                      {question.answers}
+                    </li>
+                    <hr className="horizontal-line"></hr>
+                  </>
+                ))}
+              </ul>
               <p>Questions you got wrong:</p>
               <ul>
                 {wrongQuestions.map((question, index) => (
                   <>
-                    <li className="question" key={index}>{question.question}</li>
-                    <li className="answer" key={index}>{question.answers}</li>
+                    <li className="question" key={index}>
+                      {question.question}
+                    </li>
+                    <li className="answer" key={index}>
+                      {question.answers}
+                    </li>
                     <hr className="horizontal-line"></hr>
                   </>
-                  
                 ))}
               </ul>
               <a href="/">Reset</a>
             </div>
           ) : (
-            <div className='question-box'>
+            <div className="question-box">
               <p>You have passed the test with {score}/10</p>
+              <p>Questions you got right:</p>
+              <ul>
+                {correctQuestions.map((question, index) => (
+                  <>
+                    <li className="question" key={index}>
+                      {question.question}
+                    </li>
+                    <li className="answer" key={index}>
+                      {question.answers}
+                    </li>
+                    <hr className="horizontal-line"></hr>
+                  </>
+                ))}
+              </ul>
               <p>Questions you got wrong:</p>
               <ul>
                 {wrongQuestions.map((question, index) => (
-                  <li key={index}>{question.question}</li>
+                  <>
+                    <li className="question" key={index}>
+                      {question.question}
+                    </li>
+                    <li className="answer" key={index}>
+                      {question.answers}
+                    </li>
+                    <hr className="horizontal-line"></hr>
+                  </>
                 ))}
               </ul>
               <a href="/">Reset</a>
