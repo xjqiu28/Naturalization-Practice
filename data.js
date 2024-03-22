@@ -38,7 +38,7 @@ const data = {
     },
     {
       question: 'What did the Declaration of Independence do?',
-      answers: 'declared our independence from Great Britain',
+      answers: 'declare United States independence from Great Britain',
     },
     {
       question: 'What are two rights in the Declaration of Independence?',
@@ -46,7 +46,7 @@ const data = {
     },
     {
       question: 'What is freedom of religion?',
-      answers: 'You can practice any religion, or not practice a religion.',
+      answers: 'can practice any religion or can not practice any religion',
     },
     {
       question: 'What is the economic system in the United States?',
