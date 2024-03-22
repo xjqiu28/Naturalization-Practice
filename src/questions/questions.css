@@ -20,3 +20,14 @@ input{
 .horizontal-line{
     margin: 15px 0;
 }
+
+
+.right{
+    font-weight: bold;
+    color: lightgreen;
+}
+
+.wrong{
+    font-weight: bold;
+    color: red;
+}

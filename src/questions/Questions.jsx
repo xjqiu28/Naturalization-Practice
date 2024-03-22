@@ -8,6 +8,8 @@ function Questions(props) {
   const [wrongQuestions, setWrongQuestions] = useState([]);
   const [correctQuestions, setCorrectQuestions] = useState([]);
   const { incrementScore, score } = props;
+  const [rightAnswers, setRightAnswers] = useState([]);
+  const [wrongAnswers, setWrongAnswers] = useState([]);
 
   useEffect(() => {
     const generateNumbers = () => {
@@ -52,8 +54,10 @@ function Questions(props) {
 
       if (isAnswerCorrect) {
         setCorrectQuestions([...correctQuestions, question]);
+        setRightAnswers([...rightAnswers, answer])
       } else {
         setWrongQuestions([...wrongQuestions, question]);
+        setWrongAnswers([...wrongAnswers, answer])
       }
     }
     setCount(count + 1);
@@ -75,7 +79,7 @@ function Questions(props) {
           {score < 6 ? (
             <div className="question-box">
               <p>You have failed the test 😞😞</p>
-              <p>Questions you got right:</p>
+              <p className='right'>Questions you got right:</p>
               <ul>
                 {correctQuestions.map((question, index) => (
                   <>
@@ -85,11 +89,12 @@ function Questions(props) {
                     <li className="answer" key={index}>
                       {question.answers}
                     </li>
+                    <p>Here was your answer {rightAnswers[index]}</p>
                     <hr className="horizontal-line"></hr>
                   </>
                 ))}
               </ul>
-              <p>Questions you got wrong:</p>
+              <p className='wrong'>Questions you got wrong:</p>
               <ul>
                 {wrongQuestions.map((question, index) => (
                   <>
@@ -112,12 +117,14 @@ function Questions(props) {
               <ul>
                 {correctQuestions.map((question, index) => (
                   <>
+                  
                     <li className="question" key={index}>
                       {question.question}
                     </li>
                     <li className="answer" key={index}>
                       {question.answers}
                     </li>
+                    <p>Here was your answer: <br />{rightAnswers[index]}</p>
                     <hr className="horizontal-line"></hr>
                   </>
                 ))}
