@@ -7,9 +7,9 @@ function Questions(props) {
   const [numbers, setNumbers] = useState([]);
   const [wrongQuestions, setWrongQuestions] = useState([]);
   const [correctQuestions, setCorrectQuestions] = useState([]);
-  const { incrementScore, score } = props;
   const [rightAnswers, setRightAnswers] = useState([]);
   const [wrongAnswers, setWrongAnswers] = useState([]);
+  const { incrementScore, score } = props;
 
   useEffect(() => {
     const generateNumbers = () => {
@@ -54,10 +54,10 @@ function Questions(props) {
 
       if (isAnswerCorrect) {
         setCorrectQuestions([...correctQuestions, question]);
-        setRightAnswers([...rightAnswers, answer])
+        setRightAnswers([...rightAnswers, answer]);
       } else {
         setWrongQuestions([...wrongQuestions, question]);
-        setWrongAnswers([...wrongAnswers, answer])
+        setWrongAnswers([...wrongAnswers, answer]);
       }
     }
     setCount(count + 1);
@@ -79,7 +79,7 @@ function Questions(props) {
           {score < 6 ? (
             <div className="question-box">
               <p>You have failed the test 😞😞</p>
-              <p className='right'>Questions you got right:</p>
+              <p className="right">Questions you got right:</p>
               <ul>
                 {correctQuestions.map((question, index) => (
                   <>
@@ -89,12 +89,12 @@ function Questions(props) {
                     <li className="answer" key={index}>
                       {question.answers}
                     </li>
-                    <p>Here was your answer {rightAnswers[index]}</p>
+                    <p>Here was your answer: <br />{rightAnswers[index]}</p>
                     <hr className="horizontal-line"></hr>
                   </>
                 ))}
               </ul>
-              <p className='wrong'>Questions you got wrong:</p>
+              <p className="wrong">Questions you got wrong:</p>
               <ul>
                 {wrongQuestions.map((question, index) => (
                   <>
@@ -104,6 +104,7 @@ function Questions(props) {
                     <li className="answer" key={index}>
                       {question.answers}
                     </li>
+                    <p>Here was your answer: <br />{rightAnswers[index]}</p>
                     <hr className="horizontal-line"></hr>
                   </>
                 ))}
@@ -117,7 +118,6 @@ function Questions(props) {
               <ul>
                 {correctQuestions.map((question, index) => (
                   <>
-                  
                     <li className="question" key={index}>
                       {question.question}
                     </li>
@@ -139,6 +139,7 @@ function Questions(props) {
                     <li className="answer" key={index}>
                       {question.answers}
                     </li>
+                    <p>Here was your answer: <br />{wrongAnswers[index]}</p>
                     <hr className="horizontal-line"></hr>
                   </>
                 ))}
